@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Fiscais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Novo arquivo CSS para notas-fiscais.html -->
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Notas Fiscais</h1>
+            <a href="inicio.html" class="option-button">Voltar</a>
+        </header>
+        <!-- Conteúdo da página de Notas Fiscais -->
+        <div class="notas-fiscais-container">
+            <div class="search-container">
+                <!-- Elementos para busca por cliente e filtros -->
+                <label for="nome-condominio">Digite o Nome do Condomínio:</label>
+                <input type="text" id="nome-condominio" placeholder="Digite o nome do condomínio">
+                <ul id="lista-clientes"></ul>
+                <button id="search-button">Buscar</button>
+            </div>
+            <div class="filter-container">
+                <!-- Elementos para exibir as notas fiscais filtradas -->
+                <label for="filtro-data">Filtrar por Data:</label>
+                <select id="filtro-data">
+                    <option value="recente">Mais Recentes</option>
+                    <option value="mes">Por Mês/Ano</option>
+                </select>
+                <input type="month" id="mes-ano" style="display: none;">
+                <button id="filter-button">Filtrar</button>
+            </div>
+        </div>
+        <footer style="text-align: center;">
+            <p>&copy; sos vazamentos 2023™</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

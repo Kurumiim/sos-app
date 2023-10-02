@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Clientes Cadastrados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Consultar Condominio</h1>
+        </header>
+        <a href="inicio.html" class="option-button">Voltar</a>
+        <!-- Campo de pesquisa por nome do condomínio -->
+        <div class="campo-pesquisa">
+            <label for="nome-condominio">Pesquisar por Nome do Condomínio:</label>
+            <input type="text" id="nome-condominio" placeholder="Digite o nome do condomínio">
+            <button id="btn-pesquisar" class="option-button">Pesquisar</button>
+        </div>
+        
+        <!-- Conteúdo da página de consulta de clientes -->
+        <div class="consulta-clientes-container">
+            <ul id="lista-clientes">
+                <!-- Os clientes serão adicionados dinamicamente aqui -->
+            </ul>
+        </div>
+        <footer>
+            <p>&copy; 2023 Sua Empresa</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
