@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="ordem-servico">
+    <header>
+        <h1>Ordem de Serviço</h1>
+    </header>
+    <main>
+        <form>
+            <label class="ordem-servico-label" for="cliente">Cliente:</label>
+            <input class="ordem-servico-input" type="text" id="cliente" name="cliente" required>
+
+            <label class="ordem-servico-label" for="data">Data:</label>
+            <input class="ordem-servico-input" type="date" id="data" name="data" required>
+
+            <label class="ordem-servico-label" for="servico">Serviço:</label>
+            <select class="ordem-servico-select" id="servico" name="servico" required>
+                <option value="servico1">Serviço 1</option>
+                <option value="servico2">Serviço 2</option>
+                <option value="servico3">Serviço 3</option>
+            </select>
+
+            <label class="ordem-servico-label" for="descricao">Descrição:</label>
+            <textarea class="ordem-servico-textarea" id="descricao" name="descricao" rows="4" required></textarea>
+
+            <button class="ordem-servico-button" type="submit">Salvar</button>
+            <!-- Botão para voltar à página inicial -->
+            <button class="ordem-servico-button" type="button" id="btn-voltar" href="inicio.html">Voltar</button>
+
+        </form>
+    </main>
+</body>
+
+</html>

@@ -160,3 +160,58 @@ function exibirClientes() {
 
 // Chama a função para exibir os clientes quando a página carregar
 window.addEventListener("load", exibirClientes);
+
+
+/**ORDEM DE SERVIÇO  */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const ordemServicoForm = document.getElementById('ordemServicoForm');
+
+    ordemServicoForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        // Obtenha os valores do formulário
+        const cliente = document.getElementById('cliente').value;
+        const dataAbertura = document.getElementById('dataAbertura').value;
+        const descricao = document.getElementById('descricao').value;
+        const status = document.getElementById('status').value;
+
+        // Aqui você pode enviar esses dados para o servidor ou fazer outras operações necessárias
+        console.log('Cliente:', cliente);
+        console.log('Data de Abertura:', dataAbertura);
+        console.log('Descrição:', descricao);
+        console.log('Status:', status);
+
+        // Limpe o formulário ou faça outras ações necessárias
+        ordemServicoForm.reset();
+    });
+});
+
+const { Client } = require('pg');
+
+// Configuração da conexão com o PostgreSQL
+const client = new Client({
+  user: 'lucas',        // Nome de usuário do PostgreSQL
+  host: 'localhost',          // Host onde o PostgreSQL está em execução
+  database: 'sosdb',          // Nome do banco de dados
+  password: '2221',      // Senha do PostgreSQL
+  port: 5432,                 // Porta padrão do PostgreSQL
+});
+
+// Conecta ao PostgreSQL
+client.connect();
+
+// Exemplo de consulta SQL
+client.query('SELECT * FROM pg_default', (err, res) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(res.rows);
+  // Faça algo com os resultados da consulta aqui
+});
+
+// Fecha a conexão
+client.end();
+
+
